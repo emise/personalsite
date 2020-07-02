@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "python app.py",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emise/personalsite.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Angela Liu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/emise/personalsite/issues"

@@ -1,13 +1,18 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './src/app',
+  entry: './js/app.js',
   output: {
-    filename: 'bundle.js'
+    path: __dirname + '/static',
+    filename: "bundle.js"
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        include: path.join(__dirname, 'js'),
         use: 'babel-loader'
       }
     ]

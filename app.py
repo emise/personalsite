@@ -7,8 +7,10 @@ app = Flask(__name__)
 # app.register_blueprint(image_api)
 
 
-@app.route('/')
-def load_app():
+# catch all to redirect all paths to be handled on client-side by react router
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def load_app(path):
   return render_template('index.html')
 
 if __name__ == '__main__':

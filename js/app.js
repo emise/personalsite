@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import HelloWorld from './helloworld';
+import Base from './Base';
 
-render(<HelloWorld />, document.getElementById('app-root'));
+render(<Base />, document.getElementById('app-root'));

@@ -4,9 +4,14 @@ var webpack = require('webpack');
 module.exports = {
   entry: './js/app.js',
   output: {
-    path: __dirname + '/static',
-    filename: "bundle.js"
+    path: path.join(__dirname, 'static'),
+    filename: "bundle.js",
+    publicPath: "/static/"
   },
+  devtool: 'source-map',
+  devServer:{
+        contentBase: 'static'
+    },
   module: {
     rules: [
       {

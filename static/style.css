@@ -61,7 +61,7 @@ p {
   justify-content: space-between;
 }
 
-.navlink {
+.navlink, .link {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
@@ -71,8 +71,12 @@ p {
   color: #969696;
 }
 
-.activeNavlink {
+.active-navlink {
   color: #969696;
+}
+
+.active-word-item {
+  font-weight: 700;
 }
 
 .text-center {
@@ -82,19 +86,24 @@ p {
 .footer {
   height: 70px;
   margin-top: -70px;
-  margin-bottom: 10px;
+  padding-top: 20px;
 }
 
 .word-box {
   display: flex;
-  margin: 0 -5px;
+  flex-wrap: wrap;
+  margin: -5px;
+  justify-content: space-between;
 }
 
 .word-item {
   padding: 10px;
-  flex: 1 1 0px;
   border: 4px solid #d8d8d8;
-  max-width: 200px;
+  width: 200px;
+  height: 50px;
   text-align: center;
-  margin: 0 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

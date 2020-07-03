@@ -14,7 +14,8 @@ class Words extends Component {
     const titleArray = AllWords.map((item, i) =>
       <NavLink
         key={`${i}-${item.title.replace(/ /g, "_")}`}
-        className="word-item"
+        className="word-item link"
+        activeClassName="active-word-item"
         to={`${this.props.match.path}/${item.title.replace(/ /g, "_")}`}
       >
         {item.title}
@@ -32,14 +33,13 @@ class Words extends Component {
 
     return (
       <div>
-        hi there
-        <div className="word-box">
-          {titleArray}
-        </div>
         <div>
           <Switch>
             {switchArray}
           </Switch>
+        </div>
+        <div className="word-box">
+          {titleArray}
         </div>
       </div>
     ); 

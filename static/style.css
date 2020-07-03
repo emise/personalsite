@@ -1,7 +1,20 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#app-root {
+  height: 100%;
+}
+
+#app-root > div {
+  height: 100%;
+}
+
 body {
   font-family: "Catamaran", "Helvetica Neue", sans-serif;
   background-color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h1 {
@@ -14,7 +27,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 300;
@@ -27,15 +40,20 @@ h3 {
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: "Crimson Text", serif;
   padding: 20px 0;
   line-height: 1.7em;
 }
 
 .wrapper {
-  max-width: 1000px;
-  margin: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.wrapper-inner {
+  padding-bottom: 70px;
 }
 
 .nav {
@@ -46,6 +64,7 @@ p {
 .navlink {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navlink:hover {
@@ -54,4 +73,28 @@ p {
 
 .activeNavlink {
   color: #969696;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer {
+  height: 70px;
+  margin-top: -70px;
+  margin-bottom: 10px;
+}
+
+.word-box {
+  display: flex;
+  margin: 0 -5px;
+}
+
+.word-item {
+  padding: 10px;
+  flex: 1 1 0px;
+  border: 4px solid #d8d8d8;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 5px;
 }

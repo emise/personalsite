@@ -6,7 +6,7 @@ class About extends Component {
       <div>
         Angela is a millennial who works in tech as a software engineer.
         She won a local piano competition when she was in high school, since considered
-        the peak of her creative accolades. She has received acclaim from her friends for
+        the pinnacle of her creative accolades. She has received acclaim from her friends for
         her experimental and artistic output.
 
         <blockquote>

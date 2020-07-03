@@ -54,7 +54,7 @@ AllWords = [{
   `
 },
 {
-  title: "jealousy",
+  title: "jadeite child",
   htmlText: `
     When jealousy overtakes<br />
     Consumes my heart, it leaves<br />
@@ -72,9 +72,9 @@ AllWords = [{
     I saw you in January<br />
     You called my name, grasped my hand merrily<br />
     I saw you in March<br />
-    Darting eyes, voice bitterly arched<br />
+    Eyes darting, voice bitterly arched<br />
     I saw you in May<br />
-    You seem well, I tried to say<br />
+    &ldquo;You seem well,&rdquo; I tried to say<br />
     But you just looked away<br />
     I saw you in July<br />
     Straining to hear your replies<br />
@@ -103,6 +103,7 @@ AllWords = [{
     behind a lot, fluorescent lined<br />
     flashing twinkles in our eyes<br />
     blinding in the night<br />
+    <br />
     under fixtures we park<br />
     and steal into the dark<br />
     casting backward glances to be sure<br />
@@ -113,6 +114,7 @@ AllWords = [{
     your skin glows bluish white by the lot lights<br />
     hauntingly, like an aged photograph<br />
     on a magazine epitaph<br />
+    <br />
     twirling a desiccant stalk<br />
     in fingers slight and limber<br />
     you miss the meteor trails<br />
@@ -137,11 +139,11 @@ AllWords = [{
     We find each other<br />
     Growing hazy like apparitions<br />
     Our hands and disc hardly discernible<br />
-    (We haven’t the skills to just feel it)<br />
+    (We haven&rsquo;t the skills to feel for it)<br />
     <br />
     I crane my neck upwards from the sideline<br />
     Twilight flushes slowly<br />
-    Scattering blushed pink through striating clouds<br />
+    Scattering blushing pink through striated clouds<br />
     <br />
     As if our life were this scene<br />
     A stateless image that happened to be<br />
@@ -193,5 +195,30 @@ AllWords = [{
     <br />
     Is only mine<br />
     &emsp;&emsp;to reveal
+  `
+},
+{
+  title: "a ball of yarn",
+  htmlText: `
+    Her brain is tangled in a ball of yarn<br />
+    as knots flow through blood<br />
+    blocking veins to the heart<br />
+    <br />
+    She grasps a strand and pulls-<br />
+    and pulls and pulls and pulls<br />
+    unwinding it before her in a pile on the floor<br />
+    <br />
+    With small handfuls, she swallows<br />
+    slowly in small mouthfuls<br />
+    drying spit as she fills the void<br />
+    left by the unraveled core
+
+
+  `
+},
+{
+  title: "unfair eyes",
+  htmlText: `
+    Speaking to me with those eyes isn&rsquo;t fair. Eyes like a bottomless well, emanating warm dampness like the aftermath of a summer shower. At this wooden table, you reach out across the dividing median, invading my space. Your hand covers the open flame by my hand, and my eyes follow on instinct, faint fear prickling my consciousness. Surprised that the heat doesn’t burn you, I laugh when I realize your trick - a fake candle. Perhaps I am faking my attention towards you. Perhaps I need to remain in control. But the more you talk, the more I want to hear you talk. So I watch you.
   `
 }]

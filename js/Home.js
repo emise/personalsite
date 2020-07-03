@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Word word={AllWords[0].htmlText}/>
+        <Word word={AllWords[6].htmlText}/>
       </div>
     ); 
   } 

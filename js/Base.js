@@ -8,8 +8,8 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Nav from './Nav';
 import Home from "./Home";
 import About from "./About";
-import Photos from "./Photos";
-import Words from "./Words";
+import Photos from "./Photos/Photos";
+import Words from "./Words/Words";
 
 class Base extends Component {
   render() {

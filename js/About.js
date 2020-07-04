@@ -13,6 +13,8 @@ class About extends Component {
             "This is great work"
             - A Friend, Facebook Chat
         </blockquote>
+
+        <a href='https://github.com/emise/personalsite' target="_blank">Source code</a>
       </div>
     ); 
   } 

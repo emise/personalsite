@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Lightbox from './utils/Lightbox';
+import Lightbox from '../utils/Lightbox';
 
 class Album extends Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { AllWords } from './allWords';
-import Word from './Word';
+import { AllWords } from './documents/allWords';
+import Word from './Words/Word';
 
 class Home extends Component {
   render() {

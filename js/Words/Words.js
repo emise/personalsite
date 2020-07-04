@@ -6,7 +6,7 @@ import {
   withRouter
 } from 'react-router-dom';
 
-import { AllWords } from './allWords';
+import { AllWords } from '../documents/allWords';
 import Word from './Word';
 
 class Words extends Component {

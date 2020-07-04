@@ -20,14 +20,13 @@ S3_BUCKET = s3.Bucket(BUCKET_NAME)
 @photos_api.route('/api/photos/<photoshoot_date>', methods=['GET'])
 def get_photos(photoshoot_date: Optional = None):
     """
-    Get all available photoshoot dates from s3, or fetch all photos from a specific photoshoot.
-    """
+    Get all available photoshoot dates from s3, or fetch all photos from a specific photoshoot"""
     data: List[str] = []
 
     if not photoshoot_date:
         data = _get_photoshoot_dates()
     else:
-        data = _get_photos_for_date(photoshoot_date=photoshoot_date)
+        data = _get_thumbnails_for_date(photoshoot_date=photoshoot_date)
 
     return jsonify({'data': data})
 
@@ -41,10 +40,11 @@ def _get_photoshoot_dates() -> List[str]:
     return folder_names
 
 
-def _get_photos_for_date(photoshoot_date: str) -> List[str]:
-    photo_urls = []
+def _get_thumbnails_for_date(photoshoot_date: str) -> List[str]:
+    """Fetch photo thumbnails"""
+    thumbnail_urls = []
     for obj in S3_BUCKET.objects.filter(Prefix=photoshoot_date):
-        if obj.key.endswith('.jpg'):
+        if 'thumb-' in obj.key:
             public_url = f'https://{BUCKET_NAME}.s3.amazonaws.com/{obj.key}'
-            photo_urls.append(public_url)
-    return photo_urls
+            thumbnail_urls.append(public_url)
+    return thumbnail_urls

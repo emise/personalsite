@@ -4,7 +4,7 @@ import {
   Route,
   NavLink,
   withRouter
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import { AllWords } from './allWords';
 import Word from './Word';

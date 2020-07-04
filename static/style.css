@@ -81,7 +81,7 @@ p {
   color: #969696;
 }
 
-.active-word-item {
+.active-word-item, .active-photoalbum-item {
   font-weight: 700;
 }
 
@@ -95,14 +95,14 @@ p {
   padding-top: 20px;
 }
 
-.word-box {
+.word-box, .photoshoot-nav {
   display: flex;
   flex-wrap: wrap;
   margin: -5px;
   justify-content: space-between;
 }
 
-.word-item {
+.word-item, .photoshoot-album {
   padding: 10px;
   border: 4px solid #e6e6e6;
   width: 200px;
@@ -112,4 +112,86 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.thumbnail-gallery > div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+  justify-content: space-between;
+}
+
+.thumbnail-gallery > div::after {
+  content: "";
+  flex: auto;
+}
+
+.img-thumb {
+  margin: 5px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.lightbox-inner {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
+  margin: auto;
+  background: white;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+  background: white;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  outline: none;
+}
+
+.lightbox-close-button:hover {
+  color: #737373;
+}
+
+.lightbox-right {
+  border: none;
+  outline: none;
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+}
+
+.lightbox-left {
+  border: none;
+  outline: none;
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  cursor: pointer;
 }

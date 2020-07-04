@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./utils/ScrollToTop";
 import Nav from './Nav';
 import Home from "./Home";
 import About from "./About";

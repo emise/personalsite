@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { NavLink, Route, Switch, withRouter } from 'react-router-dom';
+
+import Album from './Album';
 
 class Photos extends Component {
   constructor(props) {
@@ -8,7 +11,7 @@ class Photos extends Component {
       error: null,
       isLoaded: false,
       photoshoots: [],
-      photos: []
+      photos: [],
     }
   }
   
@@ -20,21 +23,44 @@ class Photos extends Component {
 
   render() {
     const { error, isLoaded, photoshoots, photos } = this.state;
-    console.log(photoshoots);
     if (error) {
       return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
       return <div>Looking...</div>
     }
 
+    const albumDateArray = photoshoots.data.map((item, i) =>
+      <NavLink
+        key={`${i}-${item}`}
+        className="photoshoot-album link"
+        activeClassName="active-photoalbum-item"
+        to={`${this.props.match.path}/${item}`}
+      >
+        {item}
+      </NavLink>
+    );
+
+    const switchArray = photoshoots.data.map((item, i) =>
+      <Route
+        key={`${i}-switch-${item}`}
+        path={`${this.props.match.path}/${item}`}
+        component={() => <Album photoshootDate={item} />}
+      />
+    );
+
     return (
       <div>
-        {photoshoots.data ? photoshoots.data.map((item, i) =>
-          <div key={`${i}-${item}`}>{item}</div>
-        ) : null}
+        <div className="thumbnail-gallery">
+          <Switch>
+            {switchArray}
+          </Switch>
+        </div>
+        <div className="photoshoot-nav">
+          {albumDateArray}
+        </div>
       </div>
     );
   }
 }
 
-export default Photos;
+export default withRouter(Photos);

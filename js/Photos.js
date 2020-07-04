@@ -6,8 +6,8 @@ class Photos extends Component {
       <div>
         photos
       </div>
-    ); 
-  } 
-} 
+    );
+  }
+}
 
 export default Photos;

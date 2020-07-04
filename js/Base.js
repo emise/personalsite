@@ -20,7 +20,7 @@ class Base extends Component {
           <div className="wrapper-inner">
             <h1>angela liu</h1>
             <Nav />
-            <div class="content-padding">
+            <div className="content-padding">
               <Switch>
                 <Route path="/who" component={About} />
                 <Route path="/photos" component={Photos} />

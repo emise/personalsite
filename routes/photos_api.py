@@ -1,4 +1,4 @@
-from flask import Blueprint, request, abort, jsonify
+from flask import Blueprint, jsonify
 import boto3
 from typing import List, Optional
 
@@ -9,7 +9,7 @@ photos_api = Blueprint('photos_api', __name__)
 BUCKET_NAME = 'angelaliu-photoshoot'
 s3 = boto3.resource(
     's3',
-    region_name='us-east-1',
+    region_name=settings.AWS_REGION,
     aws_access_key_id=settings.AWS_SERVER_PUBLIC_KEY,
     aws_secret_access_key=settings.AWS_SERVER_SECRET_KEY,
 )
@@ -22,8 +22,6 @@ def get_photos(photoshoot_date: Optional = None):
     """
     Get all available photoshoot dates from s3, or fetch all photos from a specific photoshoot.
     """
-    body = request.json
-
     data: List[str] = []
 
     if not photoshoot_date:

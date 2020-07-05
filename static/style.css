@@ -51,6 +51,21 @@ p {
   color: black;
 }
 
+a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+a:hover {
+  color: #047732d6;
+}
+
+a:active {
+  color: #035d27d6;
+}
+
 .wrapper {
   max-width: 800px;
   margin: 0 auto;

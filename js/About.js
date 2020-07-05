@@ -14,7 +14,7 @@ class About extends Component {
             - A Friend, Facebook Chat
         </blockquote>
 
-        <a href='https://github.com/emise/personalsite' target="_blank">Source code</a>
+        <a href='https://github.com/emise/personalsite' target="_blank">source code</a>
       </div>
     ); 
   } 

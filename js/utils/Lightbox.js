@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExpandArrowsAlt, faCompressArrowsAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faExpandArrowsAlt,
+  faCompressArrowsAlt,
+  faTimes,
+  faAngleRight,
+  faAngleLeft
+} from '@fortawesome/free-solid-svg-icons';
 
 class Lightbox extends Component {
   constructor(props) {
@@ -109,15 +115,21 @@ class Lightbox extends Component {
             className="lightbox-image lightbox-image-toggle-styles hidden"
             style={!fullSize && imgStyles ? imgStyles : null}
           />
-          <button onClick={close} className="lightbox-close-button">x</button>
+          <button onClick={close} className="lightbox-close-button">
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
           <button
             onClick={this.toggleFullSizePhoto}
             className="lightbox-original-size-button"
           >
             <FontAwesomeIcon icon={fullSize ? faCompressArrowsAlt : faExpandArrowsAlt} />
           </button>
-          <button className="lightbox-right" onClick={next}> &#62; </button>
-          <button className="lightbox-left" onClick={prev}> &#60; </button>
+          <button className="lightbox-right" onClick={next}>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </button>
+          <button className="lightbox-left" onClick={prev}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </button>
         </div>
       </div>
     )

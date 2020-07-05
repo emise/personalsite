@@ -541,7 +541,9 @@ var Album = /*#__PURE__*/function (_Component) {
         prev: function prev() {
           return _this3.prevPhoto(selectedPhotoIndex);
         }
-      }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, photos.map(function (url, i) {
+      }) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thumbnail-gallery"
+      }, photos.map(function (url, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: url,
           key: "".concat(i, "-image"),
@@ -676,9 +678,7 @@ var Photos = /*#__PURE__*/function (_Component) {
           }
         });
       });
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "thumbnail-gallery"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, switchArray)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, switchArray), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "photoshoot-nav"
       }, albumDateArray));
     }
@@ -950,9 +950,6 @@ var Lightbox = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       this.updateDimensions();
       window.addEventListener('resize', this.updateDimensions);
-      this.setState({
-        isLoaded: true
-      });
     }
   }, {
     key: "componentWillUnmount",

@@ -10,7 +10,6 @@ class Lightbox extends Component {
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions);
-    this.setState({ isLoaded: true });
   }
 
   componentWillUnmount() {

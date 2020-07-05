@@ -24,6 +24,7 @@ h1 {
   font-size: 3em;
   letter-spacing: 13px;
   margin: 30px 0;
+  color: black;
 }
 
 h2 {
@@ -37,6 +38,7 @@ h3 {
   font-size: 18px;
   margin-bottom: 20px;
   font-weight: 300;
+  color: black;
 }
 
 p {
@@ -46,6 +48,7 @@ p {
   padding: 0;
   margin: 0;
   padding-bottom: 40px;
+  color: black;
 }
 
 .wrapper {
@@ -56,6 +59,7 @@ p {
 
 .wrapper-inner {
   padding-bottom: 70px;
+  color: #444444;
 }
 
 .content-padding {
@@ -114,16 +118,12 @@ p {
   justify-content: center;
 }
 
-.thumbnail-gallery > div {
+.thumbnail-gallery {
   display: flex;
   flex-wrap: wrap;
   margin: -5px;
-  justify-content: space-between;
-}
-
-.thumbnail-gallery > div::after {
-  content: "";
-  flex: auto;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
 
 .img-thumb {
@@ -184,6 +184,7 @@ p {
   right: 0;
   top: 50%;
   cursor: pointer;
+  background: #e8e8e8;
 }
 
 .lightbox-left {
@@ -194,4 +195,14 @@ p {
   left: 0;
   top: 50%;
   cursor: pointer;
+  background: #e8e8e8;
+}
+
+.lightbox-right:hover, .lightbox-left:hover {
+  color: #737373;
+  background: #fafafa;
+}
+
+.lightbox-right:active, .lightbox-left:active {
+  color: black;
 }

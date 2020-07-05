@@ -50,11 +50,9 @@ class Photos extends Component {
 
     return (
       <div>
-        <div className="thumbnail-gallery">
-          <Switch>
-            {switchArray}
-          </Switch>
-        </div>
+        <Switch>
+          {switchArray}
+        </Switch>
         <div className="photoshoot-nav">
           {albumDateArray}
         </div>

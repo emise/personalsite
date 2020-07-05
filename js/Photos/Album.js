@@ -70,7 +70,8 @@ class Album extends Component {
             next={() => this.nextPhoto(selectedPhotoIndex)}
             prev={() => this.prevPhoto(selectedPhotoIndex)}
           /> : null }
-        <div>
+
+        <div className="thumbnail-gallery">
           {photos.map((url, i) =>
             <img
               src={url}

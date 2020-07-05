@@ -181,7 +181,8 @@ a:active {
 
 .img-thumb {
   margin: 5px;
-  width: 250px;
+  width: 30%;
+  height: 30%;
   cursor: pointer;
 }
 

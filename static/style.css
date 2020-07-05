@@ -153,30 +153,35 @@ a:active {
   height: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
   background-color: rgba(0,0,0, 0.5);
+  overflow: auto;
 }
 
 .lightbox-inner {
   position: absolute;
-  left: 5%;
-  right: 5%;
-  top: 5%;
-  bottom: 5%;
-  margin: auto;
+  top: 0;
+  left: 0;
   background: white;
-  padding: 100px;
+  padding: 50px;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
 
-.lightbox-close-button {
+.lightbox-inner-right-pos {
+  right: 0;
+  bottom: 0;
+}
+
+.lightbox-image.lightbox-image-max-width {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightbox-close-button, .lightbox-original-size-button {
   position: absolute;
   top: 0;
-  right: 0;
   color: black;
   background: white;
   border: none;
@@ -187,7 +192,17 @@ a:active {
   outline: none;
 }
 
-.lightbox-close-button:hover {
+.lightbox-close-button {
+  right: 0;
+}
+
+.lightbox-original-size-button {
+  left: 5px;
+  font-size: 14px;
+
+}
+
+.lightbox-close-button:hover, .lightbox-original-size-button:hover {
   color: #737373;
 }
 
@@ -220,4 +235,8 @@ a:active {
 
 .lightbox-right:active, .lightbox-left:active {
   color: black;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }

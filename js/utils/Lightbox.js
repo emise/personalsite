@@ -1,37 +1,50 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExpandArrowsAlt, faCompressArrowsAlt } from '@fortawesome/free-solid-svg-icons';
 
 class Lightbox extends Component {
-  state = { windowWidth: 0, windowHeight: 0, isLoaded: false };
-
-  updateDimensions = () => {
-    this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
-  };
+  state = { isLoaded: false, fullSize: false };
 
   componentDidMount() {
-    this.updateDimensions();
-    window.addEventListener('resize', this.updateDimensions);
+    document.body.classList.add('stop-scroll');
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
+    document.body.classList.remove('stop-scroll');
   }
 
   handleImageLoaded = () => this.setState({ isLoaded: true });
 
+  toggleFullSizePhoto = () => {
+    const image = document.getElementsByClassName("lightbox-image");
+    image[0].classList.toggle("lightbox-image-max-width");
+
+    const lightboxInner = document.getElementsByClassName("lightbox-inner");
+    lightboxInner[0].classList.toggle("lightbox-inner-right-pos");
+
+    this.setState({ fullSize: !this.state.fullSize });
+  }
+
   render() {
     const { url, close, next, prev } = this.props;
-    const { windowHeight, windowWidth, isLoaded } = this.state;
+    const { isLoaded, fullSize } = this.state;
 
     return (
       <div className="lightbox">
-        <div className="lightbox-inner">
+        <div className="lightbox-inner lightbox-inner-right-pos">
           {isLoaded ? null : <div>Fetching...</div>}
           <img
             src={url}
-            style={{ maxHeight: windowHeight - 250, maxWidth: windowWidth - 250 }}
             onLoad={this.handleImageLoaded}
+            className="lightbox-image lightbox-image-max-width"
           />
           <button onClick={close} className="lightbox-close-button">x</button>
+          <button
+            onClick={this.toggleFullSizePhoto}
+            className="lightbox-original-size-button"
+          >
+            <FontAwesomeIcon icon={fullSize ? faCompressArrowsAlt : faExpandArrowsAlt} />
+          </button>
           <button className="lightbox-right" onClick={next}> &#62; </button>
           <button className="lightbox-left" onClick={prev}> &#60; </button>
         </div>

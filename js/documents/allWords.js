@@ -77,14 +77,14 @@ AllWords = [{
     &ldquo;You seem well,&rdquo; I tried to say<br />
     But you just looked away<br />
     I saw you in July<br />
-    Straining to hear your replies through the lies<br />
+    Straining to hear your replies<br />
+    through her lies<br />
     I saw you in September<br />
     When you could no longer remember<br />
     That I saw you in November<br />
     A shriveled husk of what was once limber<br />
     Asking who I was<br />
     and why was I here<br />
-    <br />
     When I see you in January<br />
     I will grasp your hand<br />
     As we dance a rondo to the endless trance.
@@ -100,7 +100,7 @@ AllWords = [{
     so we may see the night<br />
     <br />
     we find an orchard with no fences<br />
-    behind a lot, fluorescent lined<br />
+    behind an empty lot, fluorescent lined<br />
     flashing twinkles in our eyes<br />
     blinding in the night<br />
     <br />
@@ -206,13 +206,12 @@ AllWords = [{
     <br />
     She grasps a strand and pulls-<br />
     and pulls and pulls and pulls<br />
-    unwinding it before her in a pile on the wood<br />
+    unwinding it before her in a pile on wood<br />
     <br />
     With small handfuls, she swallows<br />
     slowly in small mouthfuls<br />
     drying spit as she fills the void<br />
-    left by her unraveling core
-
+    left by her unraveling
 
   `
 },

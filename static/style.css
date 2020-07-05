@@ -85,6 +85,10 @@ a:active {
   justify-content: space-between;
 }
 
+.nav-icon {
+  display: none;
+}
+
 .navlink, .link {
   color: inherit;
   text-decoration: none;
@@ -94,6 +98,23 @@ a:active {
 
 .navlink:hover {
   color: #969696;
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .active-navlink {
@@ -119,6 +140,12 @@ a:active {
   flex-wrap: wrap;
   margin: -5px;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .word-box, .photoshoot-nav {
+    justify-content: center;
+  }
 }
 
 .word-item, .photoshoot-album {
@@ -239,4 +266,8 @@ a:active {
 
 .stop-scroll {
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
 }

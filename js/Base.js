@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Link,
   Switch,
   Route
 } from "react-router-dom";
@@ -18,7 +19,7 @@ class Base extends Component {
         <ScrollToTop />
         <div className="wrapper">
           <div className="wrapper-inner">
-            <h1>angela liu</h1>
+            <Link to="/"><h1>angela liu</h1></Link>
             <Nav />
             <div className="content-padding">
               <Switch>

@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 from routes.photos_api import photos_api
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 app.register_blueprint(photos_api)
 

@@ -3,21 +3,90 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExpandArrowsAlt, faCompressArrowsAlt } from '@fortawesome/free-solid-svg-icons';
 
 class Lightbox extends Component {
-  state = { isLoaded: false, fullSize: false };
+  constructor(props) {
+    super(props);
+    this.state = {
+      loadingImage: true,
+      fullSize: false,
+      windowWidth: 0,
+      windowHeight: 0,
+      imgStyles: null
+    };
+    // ref to the image
+    this.image = null;
+    this.setImageRef = element => {
+      this.image = element;
+    }
+  }
+
+  /**
+   * Calculate the image dimensions to fill up the screen without overflowing
+   * Keep the dimension ratio constant (css-only solution doesn't work in safari/chrome)
+   */
+  setImageDimensions = () => {
+    const { windowWidth, windowHeight } = this.state;
+
+    const imgWidth = this.image.clientWidth;
+    const imgHeight = this.image.clientHeight;
+
+    const whRatio = imgWidth / imgHeight;
+    const isPortrait = imgWidth > imgHeight;
+
+    const actionGutter = 70;  // 70 is the gutter for the action buttons (prev/next image, close button)
+
+    let maxWidth = 0;
+    let maxHeight = 0;
+
+    if (isPortrait) {
+      maxWidth  = windowWidth - actionGutter;
+      maxHeight = (windowWidth - actionGutter) / whRatio;
+
+      // If the calculated height is greater than the window height, relcalculate dimensions
+      // based off of the window height
+      if (maxHeight > windowHeight) {
+        maxWidth = (windowHeight - actionGutter) * whRatio;
+        maxHeight = windowHeight - actionGutter;
+      }
+    } else {
+      maxWidth = (windowHeight - actionGutter) * whRatio;
+      maxHeight = windowHeight - actionGutter;
+
+      // If the calculated width is greater than the window width, relcalculate dimensions
+      // based off of the window width
+      if (maxWidth > windowWidth) {
+        maxWidth = windowWidth - actionGutter;
+        maxHeight = (windowWidth - actionGutter) / whRatio;
+      }
+    }
+
+    this.setState({ imgStyles: { maxWidth, maxHeight }});
+  }
+
+  /* Recalculate the image dimensions after the image is loaded */
+  handleImageLoaded = () => {
+    this.setState({ loadingImage: false });
+    this.setImageDimensions();
+    this.image.classList.remove('hidden');
+  }
+
+  handleResize = () => {
+    this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
+    if (!this.state.loadingImage) this.setImageDimensions();
+  }
 
   componentDidMount() {
     document.body.classList.add('stop-scroll');
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   }
 
   componentWillUnmount() {
     document.body.classList.remove('stop-scroll');
+    window.removeEventListener('resize', this.handleResize)
   }
 
-  handleImageLoaded = () => this.setState({ isLoaded: true });
-
   toggleFullSizePhoto = () => {
-    const image = document.getElementsByClassName("lightbox-image");
-    image[0].classList.toggle("lightbox-image-max-width");
+    this.image.classList.toggle("lightbox-image-toggle-styles");
 
     const lightboxInner = document.getElementsByClassName("lightbox-inner");
     lightboxInner[0].classList.toggle("lightbox-inner-right-pos");
@@ -27,16 +96,18 @@ class Lightbox extends Component {
 
   render() {
     const { url, close, next, prev } = this.props;
-    const { isLoaded, fullSize } = this.state;
+    const { loadingImage, fullSize, imgStyles } = this.state;
 
     return (
       <div className="lightbox">
         <div className="lightbox-inner lightbox-inner-right-pos">
-          {isLoaded ? null : <div>Fetching...</div>}
+          {loadingImage && <div>Fetching...</div>}
           <img
             src={url}
+            ref={this.setImageRef}
             onLoad={this.handleImageLoaded}
-            className="lightbox-image lightbox-image-max-width"
+            className="lightbox-image lightbox-image-toggle-styles hidden"
+            style={!fullSize && imgStyles ? imgStyles : null}
           />
           <button onClick={close} className="lightbox-close-button">x</button>
           <button

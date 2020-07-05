@@ -61,10 +61,12 @@ class Album extends Component {
       return <div>Fetching...</div>
     }
 
+    // Setting the 'key' attribute will reload the component if any props change
     return (
       <div>
         { selectedPhoto && selectedPhotoIndex !== null ?
           <Lightbox
+            key={selectedPhoto}
             url={selectedPhoto}
             close={this.closeLightbox}
             next={() => this.nextPhoto(selectedPhotoIndex)}

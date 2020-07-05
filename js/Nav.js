@@ -57,13 +57,13 @@ class Nav extends Component {
 
     return (
       <div className="nav-container">
-        <MediaQuery maxWidth={600}>
+        <MediaQuery maxWidth={768}>
           <div className="nav-icon" onClick={() => this.toggleMenu(null)}>
             <FontAwesomeIcon icon={expanded ? faTimes : faBars} />
           </div>
           {expanded ? menuItems : null}
         </MediaQuery>
-        <MediaQuery minWidth={601}>
+        <MediaQuery minWidth={769}>
           {menuItems}
         </MediaQuery>
       </div>

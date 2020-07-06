@@ -211,7 +211,6 @@ a:active {
   top: 0;
   left: 0;
   background: white;
-  padding: 50px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -239,6 +238,8 @@ a:active {
   height: 50px;
   font-size: 20px;
   outline: none;
+  padding: 0;
+  margin: 0;
 }
 
 .lightbox-close-button {
@@ -246,7 +247,7 @@ a:active {
 }
 
 .lightbox-original-size-button {
-  left: 5px;
+  left: 0;
   font-size: 14px;
 
 }

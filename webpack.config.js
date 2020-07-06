@@ -2,7 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  mode: 'production',
   entry: './js/app.js',
   output: {
     path: path.join(__dirname, 'static'),

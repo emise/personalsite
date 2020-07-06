@@ -39,7 +39,7 @@ class Lightbox extends Component {
     const whRatio = imgWidth / imgHeight;
     const isPortrait = imgWidth > imgHeight;
 
-    const actionGutter = 70;  // 70 is the gutter for the action buttons (prev/next image, close button)
+    const actionGutter = 100;  // 70 is the gutter for the action buttons (prev/next image, close button)
 
     let maxWidth = 0;
     let maxHeight = 0;

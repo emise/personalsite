@@ -21,6 +21,9 @@ The React app should update the UI automatically.
 `npm install`
 
 ## Run app
-`Start python server: ./application.py`
+Start python server: `./application.py`
 
-`Start webpack: webpack --watch`
+Start webpack: `npm run dev`
+
+## Productionizing
+Build js: `npm run build`

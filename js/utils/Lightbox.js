@@ -5,7 +5,8 @@ import {
   faCompressArrowsAlt,
   faTimes,
   faAngleRight,
-  faAngleLeft
+  faAngleLeft,
+  faSpinner
 } from '@fortawesome/free-solid-svg-icons';
 
 class Lightbox extends Component {
@@ -107,7 +108,7 @@ class Lightbox extends Component {
     return (
       <div className="lightbox">
         <div className="lightbox-inner lightbox-inner-right-pos">
-          {loadingImage && <div>Fetching...</div>}
+          {loadingImage && <div><FontAwesomeIcon icon={faSpinner} spin /></div>}
           <img
             src={url}
             ref={this.setImageRef}

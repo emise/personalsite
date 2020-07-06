@@ -24,9 +24,9 @@ class Photos extends Component {
   render() {
     const { error, isLoaded, photoshoots, photos } = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>
+      return <div class="div-padding">Error: {error.message}</div>
     } else if (!isLoaded) {
-      return <div>Looking...</div>
+      return <div class="div-padding">Looking...</div>
     }
 
     const albumDateArray = photoshoots.data.map((item, i) =>

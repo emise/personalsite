@@ -56,9 +56,9 @@ class Album extends Component {
   render() {
     const { error, isLoaded, photos, selectedPhoto, selectedPhotoIndex } = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>
+      return <div class="div-padding">Error: {error.message}</div>
     } else if (!isLoaded) {
-      return <div>Fetching...</div>
+      return <div class="div-padding">Fetching...</div>
     }
 
     // Setting the 'key' attribute will reload the component if any props change

@@ -37,7 +37,7 @@ h2 {
 h3 {
   font-size: 18px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
   color: black;
 }
 
@@ -193,7 +193,6 @@ a:active {
     width: inherit;
     height: inherit;
   }
-
 }
 
 .lightbox {
@@ -289,6 +288,64 @@ a:active {
 
 .lightbox-right:active, .lightbox-left:active {
   color: black;
+}
+
+hr {
+  margin-top: 50px;
+  border: 1px dotted #d8d8d8;
+}
+
+.inquire-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .inquire-form {
+    width: 100%;
+  }
+}
+
+.inquire-form > label {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.inquire-form > label > input,
+.inquire-form > label > textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Catamaran", "Helvetica Neue", sans-serif;
+}
+
+.inquire-form > label > textarea {
+  resize: none;
+}
+
+.inquire-form > input[type=submit] {
+  width: 90px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.inquire-form > label > input:focus,
+.inquire-form > label > textarea:focus {
+  box-shadow: none;
+  border: 1px solid #047732d6;
+  outline: none;
+}
+
+.form-errors {
+  color: red;
+  margin-top: 10px;
+}
+
+.form-success {
+  color: green;
+  margin-top: 10px;
 }
 
 .stop-scroll {

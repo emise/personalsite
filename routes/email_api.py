@@ -56,7 +56,7 @@ def send_email():
         SMTP_SERVER.sendmail(SENDER, RECIPIENT, msg.as_string())
         SMTP_SERVER.close()
     # Display an error message if something goes wrong.
-    except Exception as e:
-        return jsonify({'error': str(e)})
+    except Exception:
+        raise
 
     return jsonify({'data': 'success'})

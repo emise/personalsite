@@ -149,7 +149,7 @@ AllWords = [{
     A stateless image that happened to be<br />
     Between myself and I<br />
     Yourself and you<br />
-    A moment to reference<br />
+    <br />
     <br />
     Before our voices bring us back<br />
     And we head up the hills for supper.

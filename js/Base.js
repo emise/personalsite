@@ -19,7 +19,7 @@ class Base extends Component {
         <ScrollToTop />
         <div className="wrapper">
           <div className="wrapper-inner">
-            <Link to="/"><h1>angela liu</h1></Link>
+            <Link to="/"><h1>liu angela</h1></Link>
             <Nav />
             <div className="content-padding">
               <Switch>

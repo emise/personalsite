@@ -21,9 +21,11 @@ The React app should update the UI automatically.
 `npm install`
 
 ## Run app
-Start python server: `./application.py`
+Start python server: `npm run start`
 
 Start webpack: `npm run dev`
+
+Testing across multiple devices in same network: `flask run --host=<host ip>`
 
 ## Productionizing
 Build js: `npm run build`

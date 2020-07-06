@@ -201,17 +201,17 @@ AllWords = [{
   title: "a ball of yarn",
   htmlText: `
     Her brain is tangled in a ball of yarn<br />
-    as knots flow through blood<br />
+    as knots flow through bloodstreams<br />
     blocking veins to the heart<br />
     <br />
     She grasps a strand and pulls-<br />
     and pulls and pulls and pulls<br />
-    unwinding it before her in a pile on wood<br />
+    unwinding before her in a pile on wood<br />
     <br />
     With small handfuls, she swallows<br />
     slowly in small mouthfuls<br />
-    drying spit as she fills the void<br />
-    left by her unraveling
+    spit drying as she fills<br />
+    the remaining void
 
   `
 },

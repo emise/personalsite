@@ -194,6 +194,10 @@ a:active {
   cursor: pointer;
 }
 
+.photoshoot-description {
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .word-box, .photoshoot-nav {
     justify-content: center;
@@ -202,6 +206,10 @@ a:active {
   .img-thumb {
     width: inherit;
     height: inherit;
+  }
+
+  .photoshoot-description {
+    text-align: center;
   }
 }
 

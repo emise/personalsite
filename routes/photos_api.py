@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify
 import boto3
-from typing import List, Optional
+import json
+from typing import Dict, List, Optional, Tuple
 
 import settings
 
@@ -17,21 +18,22 @@ S3_BUCKET = s3.Bucket(BUCKET_NAME)
 
 
 @photos_api.route('/api/photos', methods=['GET'])
-@photos_api.route('/api/photos/<photoshoot_date>', methods=['GET'])
-def get_photos(photoshoot_date: Optional = None):
+@photos_api.route('/api/photos/<photoshoot_name>', methods=['GET'])
+def get_photos(photoshoot_name: Optional = None):
     """
     Get all available photoshoot dates from s3, or fetch all photos from a specific photoshoot"""
     data: List[str] = []
+    description: Optional[Dict[str, str]] = None
 
-    if not photoshoot_date:
-        data = _get_photoshoot_dates()
+    if not photoshoot_name:
+        data = _get_photoshoot_names()
     else:
-        data = _get_thumbnails_for_date(photoshoot_date=photoshoot_date)
+        data, description = _get_thumbnails_for_date(photoshoot_name=photoshoot_name)
 
-    return jsonify({'data': data})
+    return jsonify({'data': data, 'description': description})
 
 
-def _get_photoshoot_dates() -> List[str]:
+def _get_photoshoot_names() -> List[str]:
     folder_names = []
     for obj in S3_BUCKET.objects.all():
         if obj.key.endswith('/'):
@@ -40,11 +42,14 @@ def _get_photoshoot_dates() -> List[str]:
     return folder_names
 
 
-def _get_thumbnails_for_date(photoshoot_date: str) -> List[str]:
+def _get_thumbnails_for_date(photoshoot_name: str) -> Tuple[List[str], Optional[Dict[str, str]]]:
     """Fetch photo thumbnails"""
     thumbnail_urls = []
-    for obj in S3_BUCKET.objects.filter(Prefix=photoshoot_date):
+    for obj in S3_BUCKET.objects.filter(Prefix=photoshoot_name):
         if 'thumb-' in obj.key:
             public_url = f'https://{BUCKET_NAME}.s3.amazonaws.com/{obj.key}'
             thumbnail_urls.append(public_url)
-    return thumbnail_urls
+        elif '.json' in obj.key:
+            description_json = obj.get()['Body'].read().decode('utf-8')
+            description = json.loads(description_json)
+    return thumbnail_urls, description

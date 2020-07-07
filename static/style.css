@@ -98,10 +98,13 @@ a:active {
 .nav {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav-icon {
   display: none;
+  width: 100%;
+  text-align: center;
 }
 
 .navlink, .link {
@@ -109,6 +112,13 @@ a:active {
   text-decoration: none;
   cursor: pointer;
   border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navlink {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .navlink:hover {

@@ -67,31 +67,6 @@ AllWords = [{
   `
 },
 {
-  title: "last rondo",
-  htmlText: `
-    I saw you in January<br />
-    You called my name, grasped my hand merrily<br />
-    I saw you in March<br />
-    Eyes darting, voice bitterly arched<br />
-    I saw you in May<br />
-    &ldquo;You seem well,&rdquo; I tried to say<br />
-    But you just looked away<br />
-    I saw you in July<br />
-    Straining to hear your replies<br />
-    through her lies<br />
-    I saw you in September<br />
-    When you could no longer remember<br />
-    That I saw you in November<br />
-    A shriveled husk of what was once limber<br />
-    Asking who I was<br />
-    and why was I here<br />
-    When I see you in January<br />
-    I will grasp your hand<br />
-    As we dance a rondo to the endless trance.
-
-  `
-},
-{
   title: "this night you glow blueish white",
   htmlText: `
     at night, at night<br />

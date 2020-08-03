@@ -27,6 +27,10 @@ h1 {
   color: black;
 }
 
+.no-spacing {
+  letter-spacing: 0;
+}
+
 h2 {
   font-size: 1.2em;
   text-transform: uppercase;

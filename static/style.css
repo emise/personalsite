@@ -188,6 +188,10 @@ a:active {
   justify-content: center;
 }
 
+.word-item:active, .photoshoot-album:active {
+  box-shadow: inset 1px 1px 1px 1px #f9f9f9;
+}
+
 .thumbnail-gallery {
   display: flex;
   flex-wrap: wrap;

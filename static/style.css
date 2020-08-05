@@ -150,10 +150,6 @@ a:active {
   color: #969696;
 }
 
-.active-navlink > h2 {
-  font-weight: 700;
-}
-
 .active-word-item, .active-photoalbum-item {
   font-weight: 700;
 }

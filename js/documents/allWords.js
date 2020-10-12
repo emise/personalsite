@@ -1,6 +1,83 @@
 export var AllWords;
 
-AllWords = [{
+AllWords = [
+{
+	title: "love song of the city",
+	htmlText: `
+		He lives in the highlight reels<br />
+		Each triumph and nadir beautifully revealed<br />
+		I smile and sympathize<br />
+		With no more to say than a cliche<br />
+		&ldquo;That&rsquo;s great,&rdquo; as I leave for the street<br />
+		A homeless man interjects to ask for coin<br />
+		Can the highlight-man see his plight?<br />
+		If I offer some change, could I follow him to the other life?<br />
+		<br />
+		Down the road the fog rolls<br />
+		A dog whimpers and car bass rumbles<br />
+		She wants to be noticed, yet also ignored<br />
+		in her expensive blouse with nowhere to go<br />
+		A passing couple glance at each other<br />
+		She mutters, &ldquo;What do they want from me?&rdquo;<br />
+		presumptuous and fearful of what they imagine<br />
+		<br />
+		A grounded pigeon commands the pedestrian give way<br />
+		Tip-toeing aside at the last, it looks full of indignation<br />
+		The gentleman thinks he is in the wrong<br />
+		So he shuffles with his head down<br />
+		while he drags his feet up<br />
+		to face his mountain ahead<br />
+		<br />
+		Golden canyons lie in wait around the corner<br />
+		Lush forests too, upon no close inspection<br />
+		Bison plains and Scandanavian meadows<br />
+		Simulacrum worlds for every whim and fancy<br />
+		A dream to bomb down those hills like they&rsquo;re not real<br />
+		What are rumble strips but another level, a new challenge<br />
+		For the kids who live to see another day<br />
+		<br />
+		Stumbling north, the wind blows east<br />
+		Turning east, the wind cuts west<br />
+		The dry leaves and leaflets in their incessant death rattle<br />
+		Spread out a path, Hansel and Gretel-like<br />
+		To delight or to ruin, who can say<br />
+		&ldquo;There is no greater thrill than what you bring to me&rdquo; is how it goes<br />
+		I shudder in the cold<br />
+		<br />
+		I retreat to the magic of old abodes<br />
+		Where indoor air sees nothing of turbulent change<br />
+		Centuries of dust and spores gather<br />
+		Seeping into the throat like an insidious reminder<br />
+		&ldquo;You aren&rsquo;t the first, but you could be the last&rdquo;<br />
+		A die for the fireworks to cast<br />
+		<br />
+		As if to reassure<br />
+		Man-made earthquakes break the dawn<br />
+		Metallic lattices tendril like bougainvilleas up aged facades<br />
+		Asphalt crumbles, then sprouts anew<br />
+		Reverberations ring through the air like a wordless chant<br />
+		Banish peace to thwart destruction<br />
+		<br />
+		And yet, lightning bolts make cracks on the empyrean roof<br />
+		Momentary branching forests alight above and below<br />
+		As the winds of change come a-blowing<br />
+		The air burns, choking our sheltered dignity<br />
+		Do we mourn or hope for a new Creation?<br />
+		Enter Nature against so-called Progress<br />
+		However we go, we go together<br />
+		<br />
+		The turkey vulture circles overhead, vigilant for a sign<br />
+		Now is the time to drown<br />
+		Not in the Pacific riptides<br />
+		Not in the cliffs of the Bay<br />
+		In the depth of the endless hills, the converted Victorian condos, the Mexican bush sage,<br />
+		the African lilies, the refuse-strewn walkways, the aromatic holes-in-the-wall, the overgrown ficus, the sweet jasmine, the street tents and the souls inside, the Angel's trumpets, the unleashed dogs, the drooping jacarandas, the queues for creameries, the sizzling hotdog carts, the wild nasturtiums, the blackberry brambles, the revving engines and crepuscule fog<br />
+		Submerge so those eagle eyes cannot find you<br />
+		Not to flee, but to stay<br />
+
+	`
+},
+{
   title: "drink the air at night",
   htmlText: `
     Soft and suffused with <br />

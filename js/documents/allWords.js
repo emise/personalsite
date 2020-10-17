@@ -55,7 +55,7 @@ AllWords = [
 		Man-made earthquakes break the dawn<br />
 		Metallic lattices tendril like bougainvilleas up aged facades<br />
 		Asphalt crumbles, then sprouts anew<br />
-		Reverberations ring through the air like a wordless chant<br />
+		A wordless chant ring through the air<br />
 		Banish peace to thwart destruction<br />
 		<br />
 		And yet, lightning bolts make cracks on the empyrean roof<br />

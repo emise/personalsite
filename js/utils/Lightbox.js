@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Swipe from 'react-easy-swipe';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faExpandArrowsAlt,
@@ -106,33 +108,39 @@ class Lightbox extends Component {
     const { loadingImage, fullSize, imgStyles } = this.state;
 
     return (
-      <div className="lightbox">
-        <div className="lightbox-inner lightbox-inner-right-pos">
-          {loadingImage && <div><FontAwesomeIcon icon={faSpinner} spin /></div>}
-          <img
-            src={url}
-            ref={this.setImageRef}
-            onLoad={this.handleImageLoaded}
-            className="lightbox-image lightbox-image-toggle-styles hidden"
-            style={!fullSize && imgStyles ? imgStyles : null}
-          />
-          <button onClick={close} className="lightbox-close-button">
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
-          <button
-            onClick={this.toggleFullSizePhoto}
-            className="lightbox-original-size-button"
-          >
-            <FontAwesomeIcon icon={fullSize ? faCompressArrowsAlt : faExpandArrowsAlt} />
-          </button>
-          <button className="lightbox-right" onClick={next}>
-            <FontAwesomeIcon icon={faAngleRight} />
-          </button>
-          <button className="lightbox-left" onClick={prev}>
-            <FontAwesomeIcon icon={faAngleLeft} />
-          </button>
+      <Swipe
+        onSwipeLeft={next}
+        onSwipeRight={prev}
+        tolerance={100}
+      >
+        <div className="lightbox">
+          <div className="lightbox-inner lightbox-inner-right-pos">
+            {loadingImage && <div><FontAwesomeIcon icon={faSpinner} spin /></div>}
+            <img
+              src={url}
+              ref={this.setImageRef}
+              onLoad={this.handleImageLoaded}
+              className="lightbox-image lightbox-image-toggle-styles hidden"
+              style={!fullSize && imgStyles ? imgStyles : null}
+            />
+            <button onClick={close} className="lightbox-close-button">
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
+            <button
+              onClick={this.toggleFullSizePhoto}
+              className="lightbox-original-size-button"
+            >
+              <FontAwesomeIcon icon={fullSize ? faCompressArrowsAlt : faExpandArrowsAlt} />
+            </button>
+            <button className="lightbox-right" onClick={next}>
+              <FontAwesomeIcon icon={faAngleRight} />
+            </button>
+            <button className="lightbox-left" onClick={prev}>
+              <FontAwesomeIcon icon={faAngleLeft} />
+            </button>
+          </div>
         </div>
-      </div>
+      </Swipe>
     )
 
   }

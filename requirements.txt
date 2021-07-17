@@ -49,7 +49,7 @@ stevedore==2.0.1
 termcolor==1.1.0
 texttable==1.6.2
 typing==3.7.4.1
-urllib3==1.24.3
+urllib3==1.26.5
 virtualenv==20.0.25
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
